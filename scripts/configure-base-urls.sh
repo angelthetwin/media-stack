@@ -134,10 +134,10 @@ main() {
   set_urlbase_bazarr bazarr /config/config/config.yaml /bazarr
   echo
 
-  # Jellyfin (network.xml — puede no tener <BaseUrl>)
-  wait_for_config jellyfin /config/network.xml 180
-  set_baseurl_jellyfin jellyfin /config/network.xml /jellyfin
-  echo
+  # # Jellyfin (network.xml — puede no tener <BaseUrl>)
+  # wait_for_config jellyfin /config/network.xml 180
+  # set_baseurl_jellyfin jellyfin /config/network.xml /jellyfin
+  # echo
 
   # Jellyseerr: depende de la versión. Si soporta APP_BASE_URL como env var,
   # hay que setearlo en el compose antes del primer boot. Si no, queda en root.

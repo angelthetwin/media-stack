@@ -145,21 +145,21 @@ services:
       - proxy
 
   # === Media server ===
-  jellyfin:
-    image: lscr.io/linuxserver/jellyfin:latest
-    container_name: jellyfin
-    restart: unless-stopped
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=America/Argentina/Mendoza
-      - JELLYFIN_PublishedServerUrl=http://localhost:8096
-    volumes:
-      - ${CONFIG_DIR:-./config}/jellyfin:/config
-      # Jellyfin solo escanea la biblioteca final.
-      - ${DATA_DIR:-./data}/media:/data/media
-    networks:
-      - proxy
+  # jellyfin:
+  #   image: lscr.io/linuxserver/jellyfin:latest
+  #   container_name: jellyfin
+  #   restart: unless-stopped
+  #   environment:
+  #     - PUID=1000
+  #     - PGID=1000
+  #     - TZ=America/Argentina/Mendoza
+  #     - JELLYFIN_PublishedServerUrl=http://localhost:8096
+  #   volumes:
+  #     - ${CONFIG_DIR:-./config}/jellyfin:/config
+  #     # Jellyfin solo escanea la biblioteca final.
+  #     - ${DATA_DIR:-./data}/media:/data/media
+  #   networks:
+  #     - proxy
 
   # === Request management ===
   jellyseerr:
